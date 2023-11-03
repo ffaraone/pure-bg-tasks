@@ -3,7 +3,7 @@
 # Copyright (c) 2023, Globex Corporation
 # All rights reserved.
 #
-from connect_ext.events import Pure-Bg-TasksEventsApplication
+from connect_ext.events import PureBgTasksEventsApplication
 
 
 def test_handle_asset_purchase_request_processing(
@@ -13,6 +13,6 @@ def test_handle_asset_purchase_request_processing(
 ):
     config = {}
     request = {'id': 1}
-    ext = Pure-Bg-TasksEventsApplication(connect_client, logger, config)
+    ext = PureBgTasksEventsApplication(connect_client, logger, config)
     result = ext.handle_asset_purchase_request_processing(request)
     assert result.status == 'success'

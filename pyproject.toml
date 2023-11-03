@@ -10,7 +10,7 @@ packages = [
 readme = "./README.md"
 
 [tool.poetry.plugins."connect.eaas.ext"]
-"eventsapp" = "connect_ext.events:Pure-Bg-TasksEventsApplication"
+"eventsapp" = "connect_ext.events:PureBgTasksEventsApplication"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4"

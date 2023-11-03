@@ -12,7 +12,7 @@ from connect.eaas.core.responses import (
 )
 
 
-class Pure-Bg-TasksEventsApplication(EventsApplicationBase):
+class PureBgTasksEventsApplication(EventsApplicationBase):
     @event(
         'asset_purchase_request_processing',
         statuses=[
