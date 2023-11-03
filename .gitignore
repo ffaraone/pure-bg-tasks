@@ -1,0 +1,7 @@
+*.pyc
+htmlcov
+.coverage
+coverage.xml
+.pure-bg-tasks_dev.env
+node_modules
+ui/tests/coverage

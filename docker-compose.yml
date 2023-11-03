@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  pure-bg-tasks_dev:
+    container_name: pure-bg-tasks_dev
+    build:
+      context: .
+    working_dir: /extension
+    command: cextrun -d --no-rich-logging
+    volumes: 
+      - .:/extension
+    env_file:
+      - .pure-bg-tasks_dev.env
+
+  pure-bg-tasks_bash:
+    container_name: pure-bg-tasks_bash
+    build:
+      context: .
+    working_dir: /extension
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/extension
+    env_file:
+      - .pure-bg-tasks_dev.env
+
+  pure-bg-tasks_test:
+    container_name: pure-bg-tasks_test
+    build:
+      context: .
+    working_dir: /extension
+    command: extension-test
+    volumes:
+      - .:/extension
+    env_file:
+      - .pure-bg-tasks_dev.env
