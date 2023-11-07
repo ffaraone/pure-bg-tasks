@@ -23,4 +23,5 @@ class PureBgTasksEventsApplication(EventsApplicationBase):
     )
     def handle_asset_purchase_request_processing(self, request):
         self.logger.info(f"Obtained request with id {request['id']}")
+        self.logger.info('Upgraded version')
         return BackgroundResponse.done()
