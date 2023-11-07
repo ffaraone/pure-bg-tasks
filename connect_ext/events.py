@@ -11,6 +11,8 @@ from connect.eaas.core.responses import (
     BackgroundResponse,
 )
 
+import ringotto
+
 
 class PureBgTasksEventsApplication(EventsApplicationBase):
     @event(
